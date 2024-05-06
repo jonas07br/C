@@ -3,25 +3,28 @@ import java.util.List;
 
 public class CarrinhoDeCompras {
     
-    public List<Compra> listaCompras;
+    private List<Compra> listaCompras;
 
     public CarrinhoDeCompras() {
         this.listaCompras = new ArrayList<>();
     }
+
     public void adicionarCompra(String nomeItem,double valor,int qtd){
-        listaCompras.add(new Compra(nomeItem,valor,qtd));
+        this.listaCompras.add(new Compra(nomeItem,valor,qtd));
     }
 
     public void removerItem(String nomeItem){
         int x=0;
+        List<Compra> compraRemover = new ArrayList<>();
         for(Compra c : listaCompras){
             if(c.getNomeItem().equalsIgnoreCase(nomeItem)){
-              listaCompras.remove(x);
-              break;  
+              compraRemover.add(c);
             }
             x++;
         }
+        this.listaCompras.removeAll(compraRemover);
     }
+
     public double calcularValorTotal(){
         double total=0;
         for(Compra c : listaCompras){
@@ -30,8 +33,10 @@ public class CarrinhoDeCompras {
         return total;
     }
     public void exibirItens(){
+        System.out.println("-------SUA LISTA DE COMPRAS---------");
         for(Compra c : listaCompras){
             System.out.println("Item:"+c.getNomeItem()+" /Valor Und:"+c.getValor()+" /Qtd:"+c.getQtd());
+            
         }
     }
 }
