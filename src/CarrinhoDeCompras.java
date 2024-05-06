@@ -14,13 +14,13 @@ public class CarrinhoDeCompras {
     }
 
     public void removerItem(String nomeItem){
-        int x=0;
+        
         List<Compra> compraRemover = new ArrayList<>();
         for(Compra c : listaCompras){
             if(c.getNomeItem().equalsIgnoreCase(nomeItem)){
               compraRemover.add(c);
             }
-            x++;
+            
         }
         this.listaCompras.removeAll(compraRemover);
     }
