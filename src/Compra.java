@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class Compra {
     public String nomeItem;
     public double valor;
@@ -14,6 +15,14 @@ public class Compra {
 
     public String getNomeItem() {
         return nomeItem;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public int getQtd() {
+        return qtd;
     }
 
    

@@ -25,13 +25,13 @@ public class CarrinhoDeCompras {
     public double calcularValorTotal(){
         double total=0;
         for(Compra c : listaCompras){
-            total+= c.valor*c.qtd;
+            total+= c.getValor()*c.getQtd();
         }
         return total;
     }
     public void exibirItens(){
         for(Compra c : listaCompras){
-            System.out.println("Item:"+c.nomeItem+" /Valor Und:"+c.valor+" /Qtd:"+c.qtd);
+            System.out.println("Item:"+c.getNomeItem()+" /Valor Und:"+c.getValor()+" /Qtd:"+c.getQtd());
         }
     }
 }
