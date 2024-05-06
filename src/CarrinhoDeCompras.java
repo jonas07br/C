@@ -26,6 +26,10 @@ public class CarrinhoDeCompras {
     }
 
     public double calcularValorTotal(){
+        if(this.listaCompras.isEmpty()){
+            System.out.println("Sua Lista de Compras está vazia:");
+            return 0;
+        }
         double total=0;
         for(Compra c : listaCompras){
             total+= c.getValor()*c.getQtd();
@@ -33,10 +37,15 @@ public class CarrinhoDeCompras {
         return total;
     }
     public void exibirItens(){
-        System.out.println("-------SUA LISTA DE COMPRAS---------");
-        for(Compra c : listaCompras){
-            System.out.println("Item:"+c.getNomeItem()+" /Valor Und:"+c.getValor()+" /Qtd:"+c.getQtd());
-            
+        if(!this.listaCompras.isEmpty()){
+            System.out.println("-------SUA LISTA DE COMPRAS---------");
+            for(Compra c : listaCompras){
+                System.out.println("Item:"+c.getNomeItem()+" /Valor Und:"+c.getValor()+" /Qtd:"+c.getQtd());
+            }
         }
+        else{
+            System.out.println("Sua Lista de Compras está vazia:");
+        }
+        
     }
 }
