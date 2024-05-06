@@ -11,8 +11,8 @@ public class Catalogo {
         this.catalogoLivros.add(new Livro(titulo,autor,ano));
     }
     public void pesquisaAutor(String autor){
+        System.out.println("Livros do autor "+autor+":");
         for(Livro l : catalogoLivros){
-            System.out.println("Livros do autor "+autor+":");
             if(l.getAutor().equalsIgnoreCase(autor)){
                System.out.println(l.getTitulo()); 
             }
