@@ -1,6 +1,6 @@
 public class Mercado {
     public static void main(String[] args) {        
-        Compras compra = new Compras();
+        CarrinhoDeCompras compra = new CarrinhoDeCompras();
         compra.adicionarCompra("Leite", 10, 1);
         compra.adicionarCompra("Carne", 40, 1);
         
