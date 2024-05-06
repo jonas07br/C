@@ -16,7 +16,5 @@ public class Mercado {
         System.out.println("O total é:"+compra.calcularValorTotal());
         
         
-        
-        
     }
 }
