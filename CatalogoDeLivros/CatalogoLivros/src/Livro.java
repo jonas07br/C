@@ -1,4 +1,9 @@
 public class Livro {
+    
+    public String toString() {
+        return "Livro [titulo=" + titulo + ", Autor=" + Autor + ", anoPubli=" + anoPubli + "]";
+    }
+
     private String titulo;
     private String Autor;
     private int anoPubli;

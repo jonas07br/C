@@ -5,6 +5,8 @@ public class Biblioteca {
         lista.adicionarLivro("As Cronicas De Narnia", "Jonas", 2001);
         lista.adicionarLivro("As Cronicas De Narnia 2", "Jonas", 2003);
         lista.adicionarLivro("As Cronicas De Narnia 3", "Jonas", 2006);
-        lista.pesquisaAutor("Jonas");
+        lista.pesquisaAutor("Zezinho");
+        lista.pesquisaIntervaloAnos(2000,2001);
+        
     }
 }
