@@ -29,11 +29,28 @@ public class ConjuntoConvidados {
     public static void main(String[] args) {
         ConjuntoConvidados lista = new ConjuntoConvidados();
         lista.addConvidado("Joao", 123);
-        lista.addConvidado("Maria", 1223);
+        lista.addConvidado("Maria", 123);
         lista.addConvidado("Jonas", 12223);
         lista.addConvidado("Pedro", 124443);
         System.out.println(lista.contarConvidados());
         lista.exibirConvidados();
+    }
+    
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        ConjuntoConvidados other = (ConjuntoConvidados) obj;
+        if (listaConvidados == null) {
+            if (other.listaConvidados != null)
+                return false;
+        } else if (!listaConvidados.equals(other.listaConvidados))
+            return false;
+        return true;
     }
     
 }
