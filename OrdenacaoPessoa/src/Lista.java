@@ -24,4 +24,9 @@ public class Lista {
         Collections.sort(pessoasAltura, new ComparatorPorAltura());
         return pessoasAltura;
     }
+    public List<Pessoa> listarPorRazao(){
+        List<Pessoa> listagem = new ArrayList<>(listaPessoa);
+        Collections.sort(listagem, new ComparatorPorRazao());
+        return listagem;
+    }
 }

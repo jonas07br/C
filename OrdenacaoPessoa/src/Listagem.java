@@ -8,5 +8,6 @@ public class Listagem {
         listagem.addPessoa(2.3, 19);
         System.out.println(listagem.listarPorAltura());
         System.out.println(listagem.listarPorIdade());
+        System.out.println(listagem.listarPorRazao());
     }
 }

@@ -36,3 +36,8 @@ class ComparatorPorAltura implements Comparator<Pessoa>{
 
     
 }
+class ComparatorPorRazao implements Comparator<Pessoa>{
+    public int compare(Pessoa p1, Pessoa p2){
+        return Double.compare(p1.getAltura()*p1.getIdade(), p2.getAltura()*p2.getIdade());
+    }
+}
